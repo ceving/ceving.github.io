@@ -34,7 +34,7 @@ function main()
     node.id = eid;
     let a = document.createElement('a');
     a.appendChild(document.createTextNode('install'));
-    a.href = 'javascript:install_opensearch("'+eid+'")';
+    a.href = 'javascript:install_engine("'+eid+'")';
     let td = document.createElement('td');
     td.appendChild(a);
     node.parentElement.parentElement.appendChild(td);
