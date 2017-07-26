@@ -43,10 +43,7 @@ function main()
 }
 function install_engine(id)
 {
-  // window.external.AddSearchProvider('')
-  // <td><a href="javascript:install_opensearch(this);">install</a></td>
-  // console.debug(arg);
-  console.debug(id);
+  window.external.AddSearchProvider(document.getElementById(id).href);
 }
 main();
     </script>
