@@ -8,7 +8,11 @@
         <tr>
           <th>DuckDuckGo Images</th>
           <td>
-            <a href="data:application/opensearchdescription+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxPcGVuU2VhcmNoRGVzY3JpcHRpb24geG1sbnM9Imh0dHA6Ly9hOS5jb20vLS9zcGVjL29wZW5zZWFyY2gvMS4xLyI%2BDQogIDxTaG9ydE5hbWU%2BRERHSU1HPC9TaG9ydE5hbWU%2BDQogIDxEZXNjcmlwdGlvbj5EdWNrRHVja0dvIEltYWdlczwvRGVzY3JpcHRpb24%2BDQogIDxJbnB1dEVuY29kaW5nPlVURi04PC9JbnB1dEVuY29kaW5nPg0KICA8VXJsIHR5cGU9InRleHQvaHRtbCIgdGVtcGxhdGU9Imh0dHBzOi8vZHVja2R1Y2tnby5jb20iPg0KCTxQYXJhbSBuYW1lPSJxIiB2YWx1ZT0ie3NlYXJjaFRlcm1zfSIvPg0KCTxQYXJhbSBuYW1lPSJ0IiB2YWx1ZT0iZmZzYiIvPg0KCTxQYXJhbSBuYW1lPSJpYSIgdmFsdWU9ImltYWdlcyIvPg0KCTxQYXJhbSBuYW1lPSJpYXgiIHZhbHVlcz0iMSIvPg0KICA8L1VybD4NCiAgPEltYWdlIGhlaWdodD0iMTYiIHdpZHRoPSIxNiIgdHlwZT0iaW1hZ2UveC1pY29uIj5odHRwczovL2R1Y2tkdWNrZ28uY29tL2Zhdmljb24uaWNvPC9JbWFnZT4NCjwvT3BlblNlYXJjaERlc2NyaXB0aW9uPg0KDQo%3D" download="DuckDuckGo_Images.xml">download</a>
+            <!-- a href="data:application/opensearchdescription+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxPcGVuU2VhcmNoRGVzY3JpcHRpb24geG1sbnM9Imh0dHA6Ly9hOS5jb20vLS9zcGVjL29wZW5zZWFyY2gvMS4xLyI%2BDQogIDxTaG9ydE5hbWU%2BRERHSU1HPC9TaG9ydE5hbWU%2BDQogIDxEZXNjcmlwdGlvbj5EdWNrRHVja0dvIEltYWdlczwvRGVzY3JpcHRpb24%2BDQogIDxJbnB1dEVuY29kaW5nPlVURi04PC9JbnB1dEVuY29kaW5nPg0KICA8VXJsIHR5cGU9InRleHQvaHRtbCIgdGVtcGxhdGU9Imh0dHBzOi8vZHVja2R1Y2tnby5jb20iPg0KCTxQYXJhbSBuYW1lPSJxIiB2YWx1ZT0ie3NlYXJjaFRlcm1zfSIvPg0KCTxQYXJhbSBuYW1lPSJ0IiB2YWx1ZT0iZmZzYiIvPg0KCTxQYXJhbSBuYW1lPSJpYSIgdmFsdWU9ImltYWdlcyIvPg0KCTxQYXJhbSBuYW1lPSJpYXgiIHZhbHVlcz0iMSIvPg0KICA8L1VybD4NCiAgPEltYWdlIGhlaWdodD0iMTYiIHdpZHRoPSIxNiIgdHlwZT0iaW1hZ2UveC1pY29uIj5odHRwczovL2R1Y2tkdWNrZ28uY29tL2Zhdmljb24uaWNvPC9JbWFnZT4NCjwvT3BlblNlYXJjaERlc2NyaXB0aW9uPg0KDQo%3D" download="DuckDuckGo_Images.xml">download</a -->
+            <a href="DuckDuckGo_Images.xml" download>download</a>
+          </td>
+          <td>
+            <a href="javascript:window.external.AddSearchProvider('DuckDuckGo_Images.xml')">install</a>
           </td>
         </tr>
       </tbody>
@@ -46,7 +50,7 @@ function install_engine(id)
   //window.external.AddSearchProvider(document.getElementById(id).href);
   window.external.AddSearchProvider("DuckDuckGo_Images.xml");
 }
-main();
+//main();
     </script>
   </body>
 </html>
