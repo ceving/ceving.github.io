@@ -24,12 +24,30 @@
       </li>
     </ul>
     <script type="text/javascript">
-function install_engine(id) {
+function main()
+{
+  let id = 0;
+  document.querySelectorAll("#engines tr a").forEach(function(node) {
+    console.debug(node.href);
+    let eid = 'e' + id;
+    id = id + 1;
+    node.id = eid;
+    let a = document.createElement('a');
+    a.appendChild(document.createTextNode('install'));
+    a.href = 'javascript:install_opensearch("'+eid+'")';
+    let td = document.createElement('td');
+    td.appendChild(a);
+    node.parentElement.parentElement.appendChild(td);
+  });
+}
+function install_engine(id)
+{
   // window.external.AddSearchProvider('')
   // <td><a href="javascript:install_opensearch(this);">install</a></td>
   // console.debug(arg);
-  // console.debug(this);
+  console.debug(id);
 }
+main();
     </script>
   </body>
 </html>
