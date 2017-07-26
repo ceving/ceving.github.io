@@ -9,5 +9,5 @@
 	<Param name="ia" value="images"/>
 	<Param name="iax" values="1"/>
   </Url>
-  <Image height="16" width="16" type="image/x-icon">https://duckduckgo.com/favicon.ico</Image>
+  <Image height="16" width="16" type="image/x-icon">DuckDuckGo_favicon_16x16.ico</Image>
 </OpenSearchDescription>
