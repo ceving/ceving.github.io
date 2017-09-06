@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>OpenSearch Engines</h1>
+    <h2>List of engines</h2>
+    <table id="engines">
+      <tbody>
+        <tr>
+          <th>DuckDuckGo Images</th>
+          <td>
+            <!-- a href="data:application/opensearchdescription+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxPcGVuU2VhcmNoRGVzY3JpcHRpb24geG1sbnM9Imh0dHA6Ly9hOS5jb20vLS9zcGVjL29wZW5zZWFyY2gvMS4xLyI%2BDQogIDxTaG9ydE5hbWU%2BRERHSU1HPC9TaG9ydE5hbWU%2BDQogIDxEZXNjcmlwdGlvbj5EdWNrRHVja0dvIEltYWdlczwvRGVzY3JpcHRpb24%2BDQogIDxJbnB1dEVuY29kaW5nPlVURi04PC9JbnB1dEVuY29kaW5nPg0KICA8VXJsIHR5cGU9InRleHQvaHRtbCIgdGVtcGxhdGU9Imh0dHBzOi8vZHVja2R1Y2tnby5jb20iPg0KCTxQYXJhbSBuYW1lPSJxIiB2YWx1ZT0ie3NlYXJjaFRlcm1zfSIvPg0KCTxQYXJhbSBuYW1lPSJ0IiB2YWx1ZT0iZmZzYiIvPg0KCTxQYXJhbSBuYW1lPSJpYSIgdmFsdWU9ImltYWdlcyIvPg0KCTxQYXJhbSBuYW1lPSJpYXgiIHZhbHVlcz0iMSIvPg0KICA8L1VybD4NCiAgPEltYWdlIGhlaWdodD0iMTYiIHdpZHRoPSIxNiIgdHlwZT0iaW1hZ2UveC1pY29uIj5odHRwczovL2R1Y2tkdWNrZ28uY29tL2Zhdmljb24uaWNvPC9JbWFnZT4NCjwvT3BlblNlYXJjaERlc2NyaXB0aW9uPg0KDQo%3D" download="DuckDuckGo_Images.xml">download</a -->
+            <a href="DuckDuckGo_Images.xml" download>download</a>
+          </td>
+          <td>
+            <a href="javascript:window.external.AddSearchProvider('DuckDuckGo_Images.xml')">install</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Background links</h2>
+    <ul>
+      <li><a href="https://www.ietf.org/rfc/rfc2397">The "data" URL scheme</a></li>
+      <li><a href="http://software.hixie.ch/utilities/cgi/data/data">The data: URI kitchen</a></li>
+      <li><a href="https://stackoverflow.com/a/16316830/402322">How to create a download link in HTML 5</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/OpenSearch">OpenSearch description</a></li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/Add-ons/Creating_OpenSearch_plugins_for_Firefox">
+          Creating OpenSearch plugins for Firefox
+        </a>
+      </li>
+    </ul>
+    <script type="text/javascript">
+function main()
+{
+  let id = 0;
+  document.querySelectorAll("#engines tr a").forEach(function(node) {
+    let eid = 'e' + id;
+    id = id + 1;
+    node.id = eid;
+    let a = document.createElement('a');
+    a.appendChild(document.createTextNode('install'));
+    a.href = 'javascript:install_engine("'+eid+'")';
+    let td = document.createElement('td');
+    td.appendChild(a);
+    node.parentElement.parentElement.appendChild(td);
+  });
+}
+function install_engine(id)
+{
+  //window.external.AddSearchProvider(document.getElementById(id).href);
+  window.external.AddSearchProvider("DuckDuckGo_Images.xml");
+}
+//main();
+    </script>
+  </body>
+</html>
